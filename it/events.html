@@ -1,0 +1,562 @@
+
+
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Eventi – Gasthaus Rafenstein Bolzano</title>
+  <meta name="description" content="Settimane speciali al Gasthaus Rafenstein: Settimane della Griglia, degli Asparagi, Cucina Estiva e Törggele. Prenota il tuo tavolo.">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="Eventi – Gasthaus Rafenstein">
+  <meta property="og:description" content="Settimane della Griglia, degli Asparagi, Cucina Estiva e altro ancora. Serate speciali sulla terrazza sopra Bolzano, tutto l'anno.">
+  <meta property="og:image" content="https://cdn1.site-media.eu/images/0/24941410/Gemini_Generated_Image_ouko81ouko81ouko-B2i-HPPW1zLscr2ZdJwxJQ.png">
+  <meta property="og:url" content="https://rafenstein.it/it/events">
+  <link rel="canonical" href="https://rafenstein.it/it/events">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&amp;family=PT+Sans:wght@400;700&amp;family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+
+  <style>
+    /* ── RESET ─────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    html, body { margin: 0; padding: 0; }
+    body { background: #f7f3ea; font-family: 'PT Sans', sans-serif; color: #2c2c28; }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+    button { font-family: inherit; cursor: pointer; }
+
+    /* ── TOKENS ─────────────────────────────────────── */
+    :root {
+      --ink: #2c2c28;
+      --paper: #f7f3ea;
+      --paper-alt: #ede8da;
+      --nav-bg: #f0ece0;
+      --accent: #2a3d2e;
+      --accent-mid: #4a6b50;
+      --accent-soft: #e6ede7;
+      --muted: #7a7a6e;
+      --line: #ddd8cc;
+      --line-strong: #2c2c28;
+      --dark: #1e2820;
+    }
+
+    /* ── UTILITY ────────────────────────────────────── */
+    .tag {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10px; letter-spacing: 3px;
+      color: var(--accent-mid); text-transform: uppercase; margin-bottom: 10px;
+    }
+    .rule { width: 100%; border: none; border-top: 1px solid var(--line); margin: 0; }
+    .container { max-width: 1300px; margin: 0 auto; }
+
+    /* ── BUTTONS ────────────────────────────────────── */
+    .btn {
+      display: inline-flex; align-items: center; gap: 6px;
+      font-family: 'PT Sans', sans-serif; font-weight: 700;
+      font-size: 13px; letter-spacing: 0.5px; text-transform: uppercase;
+      padding: 12px 24px; cursor: pointer;
+    }
+    .btn-sm  { padding: 8px 18px; font-size: 12px; }
+    .btn-lg  { padding: 15px 32px; font-size: 14px; }
+    .btn-fill    { background: var(--accent); color: var(--paper); border: 1.5px solid var(--accent); }
+    .btn-paper   { background: var(--paper); color: var(--ink); border: 1.5px solid var(--paper); }
+    .btn-outline { background: transparent; color: var(--ink); border: 1.5px solid var(--line); }
+    .btn-ghost   { background: transparent; color: var(--paper); border: 1.5px solid rgba(255,255,255,0.3); }
+    .btn-dark    { background: transparent; color: var(--paper); border: 1.5px solid rgba(255,255,255,0.4); }
+
+    /* ── NAV ────────────────────────────────────────── */
+    .nav {
+      position: sticky; top: 0; z-index: 50;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 14px 48px;
+      background: var(--nav-bg);
+      border-bottom: 1px solid var(--line);
+      backdrop-filter: blur(8px);
+    }
+    .nav-logo img { height: 52px; display: block; }
+    .nav-links { display: flex; gap: 28px; }
+    .nav-links a {
+      color: var(--ink); font-size: 12px; font-weight: 700;
+      letter-spacing: 0.8px; text-transform: uppercase;
+    }
+    .nav-links a.active { border-bottom: 2px solid var(--accent); padding-bottom: 2px; }
+    .nav-right { display: flex; gap: 10px; align-items: center; }
+    .nav-lang { font-size: 10px; color: var(--muted); letter-spacing: 1px; }
+    .hamburger {
+      display: none; background: none; border: none;
+      cursor: pointer; font-size: 22px; color: var(--ink); padding: 8px; line-height: 1;
+    }
+    .nav-mobile-right { display: none; align-items: center; gap: 8px; }
+    .mobile-menu {
+      display: none; position: absolute;
+      top: 100%; left: 0; right: 0;
+      background: var(--nav-bg); border-bottom: 1px solid var(--line);
+      flex-direction: column; padding: 12px 20px 20px; gap: 16px; z-index: 100;
+    }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a { font-size: 15px; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; color: var(--ink); }
+
+    /* ── TICKER ─────────────────────────────────────── */
+    .ticker {
+      background: var(--accent); color: #c8d8c0;
+      padding: 11px 48px;
+      font-family: 'JetBrains Mono', monospace; font-size: 10px;
+      letter-spacing: 2px; display: flex; gap: 32px;
+      overflow: hidden; text-transform: uppercase; white-space: nowrap;
+    }
+
+    /* ── SECTIONS ───────────────────────────────────── */
+    .section       { padding: 70px 48px; }
+    .section-alt   { background: var(--paper-alt); }
+    .section-dark  { background: var(--dark); color: var(--paper); }
+
+    /* ── EVENT HERO ─────────────────────────────────── */
+    .event-hero { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; }
+    .event-hero-left { display: flex; flex-direction: column; justify-content: space-between; }
+    .event-big {
+      font-family: 'PT Serif', serif; font-size: 110px;
+      line-height: 0.9; font-weight: 400; letter-spacing: -3px;
+      margin: 0;
+    }
+    .event-desc { margin-top: 22px; font-size: 16px; max-width: 460px; line-height: 1.6; color: #333; }
+    .event-hero-right { position: relative; }
+    .chef-pick {
+      position: absolute; bottom: -18px; left: -18px;
+      background: var(--paper); border: 1px solid var(--line);
+      padding: 14px 18px; box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    }
+    .chef-pick-label {
+      font-family: 'JetBrains Mono', monospace; font-size: 9px;
+      color: var(--muted); letter-spacing: 2px; text-transform: uppercase;
+    }
+    .chef-pick-name { font-family: 'PT Serif', serif; font-size: 20px; margin-top: 4px; }
+    .chef-pick-price { font-size: 13px; color: var(--accent-mid); margin-top: 4px; }
+
+    /* ── MENU SERA ──────────────────────────────────── */
+    .menu-header {
+      display: flex; justify-content: space-between;
+      align-items: baseline; gap: 12px; margin-bottom: 28px;
+    }
+    .menu-title { font-family: 'PT Serif', serif; font-size: 44px; font-style: italic; font-weight: 400; margin: 0; }
+    .menu-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+    .menu-item { border-top: 1px solid #2e3e32; padding-top: 14px; }
+    .menu-item-name { font-family: 'PT Serif', serif; font-size: 18px; color: #8fc898; }
+    .menu-item-desc { font-size: 12px; color: #8a8a7a; margin-top: 5px; line-height: 1.5; }
+    .menu-item-price {
+      font-family: 'JetBrains Mono', monospace; font-size: 13px;
+      margin-top: 8px; color: var(--paper);
+    }
+
+    /* ── EVENT KALENDER ─────────────────────────────── */
+    .kalender { border: 1px solid var(--line); }
+    .kalender-row {
+      display: grid;
+      grid-template-columns: 100px 1fr 130px 2fr 160px;
+      padding: 20px 22px; align-items: center; gap: 18px;
+    }
+    .kalender-row + .kalender-row { border-top: 1px solid var(--line); }
+    .kalender-row.active { background: var(--accent-soft); }
+    .k-status {
+      font-family: 'JetBrains Mono', monospace; font-size: 9px;
+      letter-spacing: 2px; text-transform: uppercase; color: var(--muted);
+    }
+    .k-status.now { color: var(--accent); }
+    .k-name { font-family: 'PT Serif', serif; font-size: 22px; }
+    .k-date { font-size: 12px; color: var(--muted); }
+    .k-desc { font-size: 13px; color: #444; }
+    .k-soon {
+      font-size: 10px; color: var(--muted);
+      font-family: 'JetBrains Mono', monospace; letter-spacing: 1px;
+    }
+
+    /* ── SHUTTLE ────────────────────────────────────── */
+    .shuttle-two { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; }
+    .shuttle-box {
+      border: 1.5px solid var(--line); padding: 36px;
+      background: var(--paper); position: relative;
+    }
+    .shuttle-box-label {
+      position: absolute; top: -11px; left: 20px;
+      background: var(--paper); padding: 0 8px;
+      font-family: 'JetBrains Mono', monospace; font-size: 9px;
+      letter-spacing: 2px; text-transform: uppercase; color: var(--muted);
+    }
+    .shuttle-box-title {
+      font-family: 'PT Serif', serif; font-size: 52px;
+      line-height: 1; font-weight: 400; font-style: italic; margin: 0 0 16px;
+    }
+    .shuttle-box-desc { font-size: 14px; line-height: 1.6; color: #444; margin-bottom: 16px; }
+    .shuttle-times-mono {
+      font-family: 'JetBrains Mono', monospace; font-size: 11px;
+      line-height: 2; color: var(--muted); text-transform: uppercase; margin-bottom: 22px;
+    }
+
+    /* ── FOOTER ─────────────────────────────────────── */
+    footer { background: var(--dark); color: #d8d4c8; padding: 60px 48px 40px; font-size: 14px; }
+    .footer-grid {
+      display: grid; grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+      gap: 32px; max-width: 1200px; margin: 0 auto 48px;
+    }
+    .footer-logo img { height: 38px; filter: invert(1) brightness(1.8); }
+    .footer-address { color: #9a9a8a; line-height: 1.8; margin-top: 14px; }
+    .footer-address a { color: #b8c8b0; font-weight: 700; }
+    .footer-hours { margin-top: 16px; color: #9a9a8a; line-height: 1.7; }
+    .footer-col-title {
+      font-family: 'JetBrains Mono', monospace; font-size: 9px;
+      letter-spacing: 2px; margin-bottom: 12px; color: #6a8a70; text-transform: uppercase;
+    }
+    .footer-links { display: flex; flex-direction: column; gap: 10px; }
+    .footer-links a { color: #b0b09a; }
+    .footer-bottom {
+      display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px;
+      color: #6a6a5a; font-size: 11px; padding-top: 20px;
+      border-top: 1px solid #2e3e32; max-width: 1200px; margin: 0 auto;
+    }
+    .footer-bottom a { color: #6a6a5a; margin-left: 16px; }
+
+    /* ── RESERVATION ────────────────────────────────── */
+    .reservation-header { max-width: 1300px; margin: 0 auto; padding: 60px 48px 28px; }
+    .reservation-title { font-family: 'PT Serif', serif; font-size: 42px; font-weight: 400; margin: 0 0 8px; }
+    .reservation-sub { font-size: 14px; color: var(--muted); }
+    .reservation-sub a { color: var(--accent); font-weight: 700; }
+
+    /* ── RESPONSIVE ─────────────────────────────────── */
+    @media (max-width: 768px) {
+      .nav { padding: 14px 20px; }
+      .nav-links, .nav-right { display: none; }
+      .nav-mobile-right { display: flex; }
+      .hamburger { display: block; }
+
+      .ticker { padding: 11px 20px; gap: 16px; }
+
+      .section { padding: 50px 20px; }
+
+      .event-hero { grid-template-columns: 1fr; gap: 28px; }
+      .event-big { font-size: 72px; }
+      .chef-pick { display: none; }
+
+      .menu-header { flex-direction: column; align-items: flex-start; }
+      .menu-title { font-size: 32px; }
+      .menu-grid { grid-template-columns: 1fr 1fr; gap: 16px; }
+
+      .kalender-row {
+        grid-template-columns: 80px 1fr 120px;
+        padding: 16px 14px; gap: 10px;
+      }
+      .k-desc, .kalender-row > :nth-child(5) { display: none; }
+
+      .shuttle-two { grid-template-columns: 1fr; gap: 24px; }
+      .shuttle-box { padding: 24px; }
+      .shuttle-box-title { font-size: 36px; }
+
+      footer { padding: 40px 20px 30px; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+      .footer-grid > :first-child { grid-column: 1 / -1; }
+
+      .reservation-header { padding: 40px 20px 20px; }
+      .reservation-title { font-size: 32px; }
+    }
+  </style>
+
+
+
+<!-- ═══════════════════════════════════════════
+     NAVIGAZIONE
+════════════════════════════════════════════ -->
+<nav class="nav" id="top">
+  <a href="https://rafenstein.it/it/" class="nav-logo">
+    <img src="https://cdn1.site-media.eu/images/0/20458837/logo_rafenstein2-UE-PXVr0qwkblx3mYbwwag.png" alt="Gasthaus Rafenstein">
+  </a>
+  <div class="nav-links">
+    <a href="https://rafenstein.it/it/#sera">Sera</a>
+    <a href="https://rafenstein.it/it/#pranzo">Pranzo</a>
+    <a href="/it/events" class="active">Eventi</a>
+    <a href="https://rafenstein.it/it/#shuttle">Shuttle</a>
+    <a href="https://rafenstein.it/it/#escursioni">Escursioni</a>
+  </div>
+  <div class="nav-right">
+    <span class="nav-lang"><strong>IT</strong> · <a href="https://rafenstein.it/de/" style="color:var(--muted);">DE</a></span>
+    <a href="#prenotazione" class="btn btn-fill btn-sm">Prenota</a>
+  </div>
+  <div class="nav-mobile-right">
+    <a href="#prenotazione" class="btn btn-fill btn-sm">Prenota</a>
+    <button class="hamburger" onclick="toggleMenu()" aria-label="Apri menu">☰</button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="https://rafenstein.it/it/#sera" onclick="closeMenu()">Sera</a>
+    <a href="https://rafenstein.it/it/#pranzo" onclick="closeMenu()">Pranzo</a>
+    <a href="/it/events" onclick="closeMenu()">Eventi</a>
+    <a href="https://rafenstein.it/it/#shuttle" onclick="closeMenu()">Shuttle</a>
+    <a href="https://rafenstein.it/it/#escursioni" onclick="closeMenu()">Escursioni</a>
+    <a href="https://rafenstein.it/de/" style="font-size:12px;color:var(--muted);text-transform:uppercase;font-weight:700;">DE · Deutsch</a>
+    <a href="#prenotazione" class="btn btn-fill btn-sm" style="align-self:flex-start;margin-top:4px;" onclick="closeMenu()">Prenota</a>
+  </div>
+</nav>
+
+<!-- ═══════════════════════════════════════════
+     TICKER
+════════════════════════════════════════════ -->
+<div class="ticker">
+  <span>● LIVE · SETTIMANE DELLA GRIGLIA · 10.04 — 24.04</span>
+  <span>· PIATTO DELLA GRIGLIA · 35 €</span>
+  <span>· CÔTE DE BOEUF PER 2 · 95 €</span>
+  <span>· SHUTTLE VEN + SAB · 18:30 DA BOLZANO</span>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     EVENT HERO — SETTIMANE DELLA GRIGLIA
+════════════════════════════════════════════ -->
+<div class="section">
+  <div class="container">
+    <div class="event-hero">
+      <div class="event-hero-left">
+        <div>
+          <div class="tag">Settimana speciale · Nr. 04 / 2026</div>
+          <h1 class="event-big">
+            Settimane<br>
+            <em style="color:var(--accent)">della Griglia.</em>
+          </h1>
+          <p class="event-desc">
+            Piatto della Griglia Rafenstein, Tomahawk e Piatto Grigliato Vegetariano —
+            10 – 24 aprile. Ogni sera. Sulla terrazza, quando il tempo lo permette.
+          </p>
+        </div>
+        <div style="margin-top:28px;display:flex;flex-direction:column;gap:12px;align-items:flex-start;">
+          <div style="display:flex;gap:10px;flex-wrap:wrap;">
+            <a href="#prenotazione" class="btn btn-fill btn-lg">Prenota un tavolo</a>
+            <a href="https://cdn1.site-media.eu/images/document/24940322/KulinarischeGrillwochenRafenstein-P1oO23g8sQ6PtIMT8Dqc5g.pdf" target="_blank" class="btn btn-outline btn-lg">Menu Griglia ↗︎</a>
+          </div>
+          <div style="font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--muted);letter-spacing:2px;text-transform:uppercase;">
+            Prossima settimana · Settimane degli Asparagi · dal 01.05
+          </div>
+        </div>
+      </div>
+      <div class="event-hero-right">
+        <img src="https://cdn1.site-media.eu/images/0/24941410/Gemini_Generated_Image_ouko81ouko81ouko-B2i-HPPW1zLscr2ZdJwxJQ.png" alt="Settimane della Griglia Gasthaus Rafenstein" style="width:100%;height:600px;object-fit:cover;">
+        <div class="chef-pick">
+          <div class="chef-pick-label">Scelta dello Chef</div>
+          <div class="chef-pick-name">Côte de Boeuf · 1,2 kg</div>
+          <div class="chef-pick-price">per 2 persone · 95 €</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     MENU DELLA SERA
+════════════════════════════════════════════ -->
+<div class="section section-dark">
+  <div class="container">
+    <div class="menu-header">
+      <div>
+        <div class="tag" style="color:#8fc898;">Stasera · Settimane della Griglia · 18 Aprile</div>
+        <h2 class="menu-title">Dalla cucina</h2>
+      </div>
+      <a href="https://cdn1.site-media.eu/images/document/24940322/KulinarischeGrillwochenRafenstein-P1oO23g8sQ6PtIMT8Dqc5g.pdf" target="_blank" class="btn btn-ghost btn-sm">Vedi Menu Griglia ↗︎</a>
+    </div>
+    <div class="menu-grid">
+      <div class="menu-item">
+        <div class="menu-item-name">Tagliata di manzo</div>
+        <div class="menu-item-desc">Rucola, Grana, limone</div>
+        <div class="menu-item-price">26 €</div>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-name">Bistecca milanese di vitello</div>
+        <div class="menu-item-desc">con patate arrosto</div>
+        <div class="menu-item-price">24 €</div>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-name">Schlutzkrapfen</div>
+        <div class="menu-item-desc">spinaci e ricotta · burro di malga</div>
+        <div class="menu-item-price">17 €</div>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-name">Strudel di mele</div>
+        <div class="menu-item-desc">salsa alla vaniglia · fatto in casa</div>
+        <div class="menu-item-price">5 €</div>
+      </div>
+    </div>
+    <div style="margin-top:28px;display:flex;gap:10px;flex-wrap:wrap;">
+      <a href="#prenotazione" class="btn btn-paper">Prenota per stasera</a>
+      <a href="tel:+393762800929" class="btn btn-ghost">Chiama lo Shuttle</a>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     CALENDARIO EVENTI 2026
+════════════════════════════════════════════ -->
+<div class="section">
+  <div class="container">
+    <div class="tag">Calendario eventi 2026</div>
+    <h2 style="font-family:'PT Serif',serif;font-size:44px;font-weight:400;margin:0 0 32px;">
+      Durante <em style="color:var(--accent)">tutto l'anno.</em>
+    </h2>
+    <div class="kalender">
+      <div class="kalender-row active">
+        <div class="k-status now">Adesso</div>
+        <div class="k-name">Settimane della Griglia</div>
+        <div class="k-date">10.04 – 24.04</div>
+        <div class="k-desc">Dry-aged, Côte de Boeuf, dal fuoco di faggio</div>
+        <a href="#prenotazione" class="btn btn-fill btn-sm">Prenota</a>
+      </div>
+      <div class="kalender-row">
+        <div class="k-status">Presto</div>
+        <div class="k-name">Settimane degli Asparagi</div>
+        <div class="k-date">01.05 – 15.06</div>
+        <div class="k-desc">Asparagi bianchi e verdi della regione</div>
+        <div class="k-soon">Prossimamente</div>
+      </div>
+      <div class="kalender-row">
+        <div class="k-status">Estate</div>
+        <div class="k-name">Cucina Estiva Mediterranea</div>
+        <div class="k-date">15.07 – 30.09</div>
+        <div class="k-desc">Piatti leggeri estivi con tocco mediterraneo</div>
+        <div class="k-soon">Prossimamente</div>
+      </div>
+      <div class="kalender-row">
+        <div class="k-status">Autunno</div>
+        <div class="k-name">Tempo del Törggele</div>
+        <div class="k-date">30.09 – 30.11</div>
+        <div class="k-desc">Vino novello, castagne, cucina autunnale altoatesina</div>
+        <div class="k-soon">Prossimamente</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     SHUTTLE
+════════════════════════════════════════════ -->
+<div class="section section-alt">
+  <div class="container">
+    <div class="shuttle-two">
+      <div class="shuttle-box">
+        <div class="shuttle-box-label">Venerdì + Sabato</div>
+        <h2 class="shuttle-box-title">
+          Veniamo a<br>prenderti a Bolzano.
+        </h2>
+        <p class="shuttle-box-desc">
+          Aperitivo in macchina. 7 posti. Solo con prenotazione.
+        </p>
+        <div class="shuttle-times-mono">
+          Andata · Piazza Maria Dellago · 18:30 / 19:30<br>
+          Ritorno · Rafenstein · 22:00 / 22:30
+        </div>
+        <div style="display:flex;gap:10px;flex-wrap:wrap;">
+          <a href="tel:+393762800929" style="display:inline-flex;padding:12px 22px;background:var(--accent);color:var(--paper);font-family:'PT Sans',sans-serif;font-weight:700;font-size:13px;text-transform:uppercase;letter-spacing:0.5px;">
+            Chiama lo Shuttle
+          </a>
+          <a href="https://wa.me/393762800929" target="_blank" class="btn btn-outline">WhatsApp ↗︎</a>
+        </div>
+      </div>
+      <img src="https://cdn1.site-media.eu/images/0/24929880/Gemini_Generated_Image_pornb2pornb2porn-xVv-kZ04_p-RPJVS9SFr_w.png" alt="Shuttle Rafenstein" style="width:100%;height:460px;object-fit:cover;">
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     THEFORK RESERVATION WIDGET
+════════════════════════════════════════════ -->
+<div id="prenotazione" style="background:var(--paper);">
+  <div class="reservation-header">
+    <div class="tag">Prenotazione</div>
+    <div class="reservation-title">Prenota un tavolo</div>
+    <div class="reservation-sub">
+      Online via TheFork · oppure:
+      <a href="tel:+393762800929">+39 376 280 0929</a>
+    </div>
+  </div>
+  <iframe src="https://widget.thefork.com/879fe446-b58c-4414-8703-4dd700e5caf5" allow="payment *" style="width:100%;min-height:800px;border:none;display:block;" title="Prenota un tavolo — Gasthaus Rafenstein" loading="lazy">
+  </iframe>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     FOOTER
+════════════════════════════════════════════ -->
+<footer>
+  <div class="footer-grid">
+    <div>
+      <div class="footer-logo">
+        <img src="https://cdn1.site-media.eu/images/0/20458837/logo_rafenstein2-UE-PXVr0qwkblx3mYbwwag.png" alt="Gasthaus Rafenstein">
+      </div>
+      <div class="footer-address">
+        Rafensteinerweg 38<br>
+        39100 Bolzano, Alto Adige · Italia<br><br>
+        <a href="https://www.google.com/maps?geocode=FSCxxQIdDyitACkDKsXsX56CRzEmgFlDE-n1Bg%3D%3D;FeLSxQIdHPasACl_Q9AE7J6CRzF_Kou0vLZcnw%3D%3D;FTnsxQIda0mtACkr4uK-8Z6CRzHGh2AVe1Q4bA%3D%3D&amp;daddr=Abzweigung+St.+Georgen,+39100+Bozen,+Autonome+Provinz+Bozen+-+S%C3%BCdtirol+to:Restaurant+Schloss+Rafenstein,+Rafensteiner+Weg,+38,+39100+Bozen,+Autonome+Provinz+Bozen+-+S%C3%BCdtirol&amp;saddr=Weingut+Hans+Rottensteiner,+Sarntaler+Stra%C3%9Fe,+Bozen,+Autonome+Provinz+Bozen+-+S%C3%BCdtirol&amp;dirflg=d" target="_blank" rel="noopener">Indicazioni su Google Maps →︎</a>
+      </div>
+      <div class="footer-hours">
+        <div style="font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:2px;color:#6a8a70;text-transform:uppercase;margin-bottom:6px;">Orari di apertura</div>
+        Bar: tutti i giorni 11:00 – 22:00<br>
+        Cucina: 11:30 – 14:30<br>
+        &amp;&nbsp;&nbsp;18:00 – 20:30
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-title">Visita</div>
+      <div class="footer-links">
+        <a href="https://rafenstein.it/it/#sera">Sera</a>
+        <a href="https://rafenstein.it/it/#pranzo">Pranzo</a>
+        <a href="/it/events">Eventi</a>
+        <a href="https://rafenstein.it/it/#shuttle">Shuttle</a>
+        <a href="https://rafenstein.it/it/#escursioni">Escursioni</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-title">Menu</div>
+      <div class="footer-links">
+        <a href="https://cdn1.site-media.eu/images/document/24504167/Speisekarte_Rafenstein_Reduziert-L8Ho-uNdyQssEMFfI8gupQ.pdf" target="_blank">Menu ↗︎</a>
+        <a href="https://cdn1.site-media.eu/images/document/24852178/Muttertag_26-Bjb-Bh4W-eSNASlCZknj0Q.pdf" target="_blank">Menu Festa della Mamma ↗︎</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-title">Contatti</div>
+      <div class="footer-links">
+        <a href="tel:+393762800929">+39 376 280 0929</a>
+        <a href="mailto:info@rafenstein.it">info@rafenstein.it</a>
+        <a href="https://wa.me/393762800929" target="_blank">WhatsApp ↗︎</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-title">Prenotazione</div>
+      <div class="footer-links">
+        <a href="#prenotazione">Prenota un tavolo</a>
+        <a href="mailto:info@rafenstein.it">Richiesta di gruppo</a>
+        <a href="mailto:info@rafenstein.it">Eventi privati</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Gasthaus Rafenstein</span>
+    <span>
+      <a href="https://rafenstein.it/it/impressum/" target="_blank">Note legali</a>
+      <a href="https://rafenstein.it/it/privacy/" target="_blank">Privacy</a>
+    </span>
+  </div>
+</footer>
+
+<!-- ═══════════════════════════════════════════
+     JAVASCRIPT
+════════════════════════════════════════════ -->
+<script>
+  function toggleMenu() {
+    document.getElementById('mobileMenu').classList.toggle('open');
+  }
+  function closeMenu() {
+    document.getElementById('mobileMenu').classList.remove('open');
+  }
+
+  // TheFork booking confirmation
+  window.addEventListener('message', function(e) {
+    if (!e.data) return;
+    const d = typeof e.data === 'string' ? e.data : JSON.stringify(e.data);
+    if (d.includes('booking_confirmed') || d.includes('confirmation')) {
+      window.location.href = 'https://rafenstein.it/it/grazie';
+    }
+  });
+</script>
+
+
+
