@@ -1,12 +1,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Gasthaus Rafenstein – Traditionelle Südtiroler Küche über Bozen</title>
-<meta name="description" content="Gasthaus Rafenstein – traditionelle Südtiroler Küche mit Panoramablick über Bozen. Täglich geöffnet, mittags und abends. Business Lunch, Event-Wochen, Shuttle-Service aus Bozen. Jetzt reservieren.">
+<meta name="description" content="Gasthaus Rafenstein – traditionelle Südtiroler Küche mit Panoramablick über Bozen. Täglich geöffnet, mittags und abends. Business Lunch, Event-Wochen, Törggelen. Jetzt reservieren.">
 <meta name="robots" content="index, follow">
 <meta name="author" content="Gasthaus Rafenstein">
 <meta property="og:type" content="restaurant">
 <meta property="og:title" content="Gasthaus Rafenstein – Traditionelle Südtiroler Küche über Bozen">
-<meta property="og:description" content="Panoramaterrasse über Bozen, täglich geöffnet, Business Lunch &amp; Abendküche. Shuttle-Service Fr+Sa aus Bozen.">
+<meta property="og:description" content="Panoramaterrasse über Bozen, täglich geöffnet, Business Lunch &amp; Abendküche. Törggelen September–November.">
 <meta property="og:image" content="https://cdn1.site-media.eu/images/0/23125376/FFH25971-HDR-5h0dFSFEI1iWd9khT0TJuA.jpg">
 <meta property="og:url" content="https://rafenstein.it">
 <link rel="canonical" href="https://rafenstein.it/de/">
@@ -42,6 +42,7 @@
     --line: #ddd8cc;
     --line-strong: #2c2c28;
     --dark: #1e2820;
+    --amber: #c4782a;
   }
 
   /* ── UTILITY ────────────────────────────────────── */
@@ -197,16 +198,6 @@
   .mini-name { font-family: 'PT Serif', serif; font-size: 20px; margin-top: 4px; color: #d8d4c8; }
   .mini-date { font-size: 12px; color: #6a7a68; margin-top: 4px; }
 
-  /* ── SHUTTLE ────────────────────────────────────── */
-  .shuttle-card {
-    background: var(--accent-soft); padding: 16px 20px; margin-bottom: 20px;
-  }
-  .shuttle-times { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; font-size: 14px; line-height: 1.6; }
-  .shuttle-label {
-    font-family: 'JetBrains Mono', monospace; font-size: 9px;
-    letter-spacing: 2px; color: var(--muted); text-transform: uppercase; margin-bottom: 4px;
-  }
-
   /* ── WANDERN ────────────────────────────────────── */
   .hike-list { border: 1px solid var(--line); margin-bottom: 20px; }
   .hike-item {
@@ -249,6 +240,17 @@
   .reservation-title { font-family: 'PT Serif', serif; font-size: 42px; font-weight: 400; margin-bottom: 8px; }
   .reservation-sub { font-size: 14px; color: var(--muted); }
   .reservation-sub a { color: var(--accent); font-weight: 700; }
+
+  /* ── ANFRAGE FORM ───────────────────────────────── */
+  .anfrage-section { padding: 60px 48px; background: var(--paper-alt); }
+  .anfrage-inner { max-width: 800px; margin: 0 auto; }
+  .anfrage-grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 20px; }
+  .anf-field { display: flex; flex-direction: column; gap: 6px; }
+  .anf-field.full { grid-column: 1 / -1; }
+  .anf-label { font-family: 'JetBrains Mono', monospace; font-size: 9px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); }
+  .anf-input, .anf-select, .anf-textarea { font-family: 'PT Sans', sans-serif; font-size: 14px; color: var(--ink); background: var(--paper); border: 1px solid var(--line); padding: 10px 14px; outline: none; width: 100%; transition: border-color 0.15s; appearance: none; -webkit-appearance: none; }
+  .anf-input:focus, .anf-select:focus, .anf-textarea:focus { border-color: var(--accent); }
+  .anf-textarea { resize: vertical; min-height: 90px; }
 
   /* ── FOOTER ─────────────────────────────────────── */
   footer { background: var(--dark); color: #d8d4c8; padding: 60px 48px 40px; font-size: 14px; }
@@ -297,6 +299,8 @@
     .mobile-quick-btns .btn { padding: 9px 14px; font-size: 11px; }
 
     .section { padding: 50px 20px; }
+    .anfrage-section { padding: 40px 20px; }
+    .anfrage-grid-2 { grid-template-columns: 1fr; }
 
     .info-grid { grid-template-columns: 1fr 1fr; }
     .info-card { min-height: 160px; padding: 20px 16px; border-right: none !important; border-bottom: 1px solid var(--line-strong) !important; }
@@ -346,9 +350,9 @@
     <a href="#abends">Abends</a>
     <a href="#mittags">Mittags</a>
     <a href="/de/events">Events</a>
-    <a href="#shuttle">Shuttle</a>
     <a href="#wandern">Wandern</a>
     <a href="#galerie">Galerie</a>
+    <a href="/de/toerggelen" style="color:var(--amber);">Törggelen</a>
   </div>
   <div class="nav-right">
     <span class="nav-lang">DE ︎ <a href="https://rafenstein.it/it/" style="color:var(--muted);">IT</a></span>
@@ -362,9 +366,9 @@
     <a href="#abends" onclick="closeMenu()">Abends</a>
     <a href="#mittags" onclick="closeMenu()">Mittags</a>
     <a href="/de/events" onclick="closeMenu()">Events</a>
-    <a href="#shuttle" onclick="closeMenu()">Shuttle</a>
     <a href="#wandern" onclick="closeMenu()">Wandern</a>
     <a href="#galerie" onclick="closeMenu()">Galerie</a>
+    <a href="/de/toerggelen" onclick="closeMenu()" style="color:var(--amber);">Törggelen</a>
     <a href="https://rafenstein.it/it/" style="font-size:12px;color:var(--muted);text-transform:uppercase;font-weight:700;">IT · Italiano</a>
   </div>
 </nav>
@@ -509,40 +513,6 @@
 </div>
 
 <!-- ═══════════════════════════════════════════
-     SHUTTLE
-════════════════════════════════════════════ -->
-<div class="section" id="shuttle">
-  <div class="container">
-    <div class="two-col two-col-eq">
-      <img src="https://cdn1.site-media.eu/images/0/24929880/Gemini_Generated_Image_pornb2pornb2porn-xVv-kZ04_p-RPJVS9SFr_w.png" alt="Shuttle Rafenstein aus Bozen" style="width:100%;height:480px;object-fit:cover;">
-      <div>
-        <div class="tag">Shuttle aus Bozen · Fr + Sa</div>
-        <h2>Genuss ohne <em style="color:var(--accent)">Bedenken.</em></h2>
-        <p>Wir holen Sie im Zentrum von Bozen ab — Aperitivo im Auto inklusive.
-           7 Plätze, nur mit Reservierung.</p>
-        <div class="shuttle-card">
-          <div class="shuttle-times">
-            <div>
-              <div class="shuttle-label">Hinfahrt</div>
-              Maria Dellago Platz<br>18:30 · 19:30 Uhr
-            </div>
-            <div>
-              <div class="shuttle-label">Rückfahrt</div>
-              ab Rafenstein<br>22:00 · 22:30 Uhr
-            </div>
-          </div>
-        </div>
-        <div class="cta-row">
-          <a href="tel:+393762800929" class="btn btn-fill">Shuttle anrufen</a>
-          <a href="https://wa.me/393762800929" target="_blank" class="btn btn-outline">WhatsApp ↗︎</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<hr class="rule">
-
-<!-- ═══════════════════════════════════════════
      WANDERN
 ════════════════════════════════════════════ -->
 <div class="section" id="wandern">
@@ -580,7 +550,7 @@
 </div>
 
 <!-- ═══════════════════════════════════════════
-     WAS SIE WISSEN SOLLTEN (vor Galerie)
+     WAS SIE WISSEN SOLLTEN
 ════════════════════════════════════════════ -->
 <div class="section">
   <div class="container">
@@ -615,11 +585,11 @@
       </div>
       <div class="info-card border-r">
         <div>
-          <div class="info-card-label">Shuttle aus Bozen</div>
-          <div class="info-card-big">Fr + Sa</div>
-          <div class="info-card-sub">Maria Dellago Platz · 18:30 / 19:30 · Aperitivo inklusive.</div>
+          <div class="info-card-label">Törggelen 2026</div>
+          <div class="info-card-big" style="color:var(--amber);">Sept.–Nov.</div>
+          <div class="info-card-sub">Neuer Wein, Kastanien, Südtiroler Herbstküche. Gruppenreservierungen ab sofort möglich.</div>
         </div>
-        <a href="tel:+393762800929" class="info-card-link">Shuttle anrufen</a>
+        <a href="/de/toerggelen" class="info-card-link" style="border-color:var(--amber);color:var(--amber);">Grup­pen anfragen →</a>
       </div>
       <div class="info-card border-r">
         <div>
@@ -677,7 +647,7 @@
         <img src="https://cdn1.site-media.eu/images/0/24929795/Gemini_Generated_Image_yqgg4eyqgg4eyqgg-bIL6Rk0khDzrQNCLZeiuXw.png" alt="Grillwochen">
       </div>
       <div class="g-item" onclick="openLightbox(this)">
-        <img src="https://cdn1.site-media.eu/images/0/24929880/Gemini_Generated_Image_pornb2pornb2porn-xVv-kZ04_p-RPJVS9SFr_w.png" alt="Shuttle">
+        <img src="https://cdn1.site-media.eu/images/0/24929880/Gemini_Generated_Image_pornb2pornb2porn-xVv-kZ04_p-RPJVS9SFr_w.png" alt="Rafenstein">
       </div>
       <div class="g-item" onclick="openLightbox(this)">
         <img src="https://d2exd72xrrp1s7.cloudfront.net/www/16/165psthipr1pt1tse9qitok0xx3fp8jesi-p81410906-full/17348525ea1?width=1920&amp;crop=false&amp;q=70" alt="Wanderung">
@@ -706,9 +676,7 @@
     </p>
     <div class="cta-btns">
       <a href="#reservierung" class="btn btn-fill btn-lg">Jetzt reservieren</a>
-      <a href="tel:+393762800929" style="display:inline-flex;align-items:center;padding:15px 32px;border:1.5px solid var(--accent);color:var(--accent);font-family:'PT Sans',sans-serif;font-weight:700;font-size:14px;text-transform:uppercase;letter-spacing:0.5px;">
-        Shuttle anrufen
-      </a>
+      <a href="tel:+393762800929" style="display:inline-flex;align-items:center;padding:15px 32px;border:1.5px solid var(--accent);color:var(--accent);font-family:'PT Sans',sans-serif;font-weight:700;font-size:14px;text-transform:uppercase;letter-spacing:0.5px;">Anrufen</a>
       <a href="https://wa.me/393762800929" target="_blank" class="btn btn-outline btn-lg">WhatsApp ↗︎</a>
     </div>
   </div>
@@ -729,6 +697,60 @@
   </div>
   <iframe src="https://widget.thefork.com/879fe446-b58c-4414-8703-4dd700e5caf5" allow="payment *" style="width:100%;min-height:800px;border:none;display:block;" title="Tisch reservieren — Gasthaus Rafenstein" loading="lazy">
   </iframe>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     ANFRAGE-FORMULAR
+════════════════════════════════════════════ -->
+<div class="anfrage-section">
+  <div class="anfrage-inner">
+    <div class="tag">Reservierung · Direkte Anfrage</div>
+    <h2 style="font-family:'PT Serif',serif;font-size:38px;font-weight:400;margin:0 0 8px;">Tisch anfragen</h2>
+    <p style="font-size:14px;color:var(--muted);margin:0 0 4px;line-height:1.6;">Alternativ zum Widget — wir bestätigen kurzfristig per E-Mail oder Telefon.</p>
+    <form action="https://formspree.io/f/mgoqzvgb" method="POST">
+      <input type="hidden" name="_subject" value="Reservierungsanfrage Rafenstein">
+      <div class="anfrage-grid-2">
+        <div class="anf-field">
+          <label class="anf-label" for="r-datum">Datum</label>
+          <input class="anf-input" type="date" id="r-datum" name="datum" required>
+        </div>
+        <div class="anf-field">
+          <label class="anf-label" for="r-uhrzeit">Uhrzeit</label>
+          <select class="anf-select" id="r-uhrzeit" name="uhrzeit" required>
+            <option value="">Bitte wählen</option>
+            <option>Mittags · 11:30 – 14:30</option>
+            <option>Abends · 18:30 – 21:00</option>
+          </select>
+        </div>
+        <div class="anf-field">
+          <label class="anf-label" for="r-personen">Personen</label>
+          <select class="anf-select" id="r-personen" name="personen" required>
+            <option value="">Anzahl wählen</option>
+            <option>1 Person</option>
+            <option>2 Personen</option>
+            <option>3 Personen</option>
+            <option>4 Personen</option>
+            <option>5 Personen</option>
+            <option>6 Personen</option>
+            <option>7 Personen</option>
+            <option>8+ Personen</option>
+          </select>
+        </div>
+        <div class="anf-field">
+          <label class="anf-label" for="r-name">Name</label>
+          <input class="anf-input" type="text" id="r-name" name="name" placeholder="Ihr Name" required>
+        </div>
+        <div class="anf-field full">
+          <label class="anf-label" for="r-nachricht">Nachricht (optional)</label>
+          <textarea class="anf-textarea" id="r-nachricht" name="nachricht" placeholder="Besonderer Anlass, Allergien, Wünsche ..."></textarea>
+        </div>
+      </div>
+      <div style="margin-top:20px;display:flex;gap:12px;align-items:center;flex-wrap:wrap;">
+        <button type="submit" class="btn btn-fill">Anfrage senden</button>
+        <span style="font-size:12px;color:var(--muted);">oder: <a href="tel:+393762800929" style="color:var(--accent);font-weight:700;">+39 376 280 0929</a> · <a href="https://wa.me/393762800929" target="_blank" style="color:var(--accent);font-weight:700;">WhatsApp</a></span>
+      </div>
+    </form>
+  </div>
 </div>
 
 <!-- ═══════════════════════════════════════════
@@ -758,8 +780,8 @@
         <a href="#abends">Abends</a>
         <a href="#mittags">Mittags</a>
         <a href="/de/events">Events</a>
-        <a href="#shuttle">Shuttle</a>
         <a href="#wandern">Wandern</a>
+        <a href="/de/toerggelen" style="color:#c4782a;">Törggelen</a>
       </div>
     </div>
     <div>
