@@ -1,5 +1,6 @@
-
-
+<!DOCTYPE html>
+<html lang="it">
+<head>
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -39,6 +40,7 @@
       --line: #ddd8cc;
       --line-strong: #2c2c28;
       --dark: #1e2820;
+      --amber: #c4782a;
     }
 
     /* ── UTILITY ────────────────────────────────────── */
@@ -272,8 +274,8 @@
     <a href="https://rafenstein.it/it/#sera">Sera</a>
     <a href="https://rafenstein.it/it/#pranzo">Pranzo</a>
     <a href="/it/events" class="active">Eventi</a>
-    <a href="https://rafenstein.it/it/#shuttle">Shuttle</a>
     <a href="https://rafenstein.it/it/#escursioni">Escursioni</a>
+    <a href="/it/toerggelen" style="color:var(--amber);">Törggelen</a>
   </div>
   <div class="nav-right">
     <span class="nav-lang"><strong>IT</strong> · <a href="https://rafenstein.it/de/" style="color:var(--muted);">DE</a></span>
@@ -287,8 +289,8 @@
     <a href="https://rafenstein.it/it/#sera" onclick="closeMenu()">Sera</a>
     <a href="https://rafenstein.it/it/#pranzo" onclick="closeMenu()">Pranzo</a>
     <a href="/it/events" onclick="closeMenu()">Eventi</a>
-    <a href="https://rafenstein.it/it/#shuttle" onclick="closeMenu()">Shuttle</a>
     <a href="https://rafenstein.it/it/#escursioni" onclick="closeMenu()">Escursioni</a>
+    <a href="/it/toerggelen" style="color:var(--amber);" onclick="closeMenu()">Törggelen</a>
     <a href="https://rafenstein.it/de/" style="font-size:12px;color:var(--muted);text-transform:uppercase;font-weight:700;">DE · Deutsch</a>
     <a href="#prenotazione" class="btn btn-fill btn-sm" style="align-self:flex-start;margin-top:4px;" onclick="closeMenu()">Prenota</a>
   </div>
@@ -301,7 +303,7 @@
   <span>● LIVE · SETTIMANE DELLA GRIGLIA · 10.04 — 24.04</span>
   <span>· PIATTO DELLA GRIGLIA · 35 €</span>
   <span>· CÔTE DE BOEUF PER 2 · 95 €</span>
-  <span>· SHUTTLE VEN + SAB · 18:30 DA BOLZANO</span>
+  <span>· TÖRGGELEN 2026 · DA SETTEMBRE</span>
 </div>
 
 <!-- ═══════════════════════════════════════════
@@ -380,7 +382,7 @@
     </div>
     <div style="margin-top:28px;display:flex;gap:10px;flex-wrap:wrap;">
       <a href="#prenotazione" class="btn btn-paper">Prenota per stasera</a>
-      <a href="tel:+393762800929" class="btn btn-ghost">Chiama lo Shuttle</a>
+      <a href="tel:+393762800929" class="btn btn-ghost">Chiama</a>
     </div>
   </div>
 </div>
@@ -421,7 +423,7 @@
         <div class="k-name">Tempo del Törggele</div>
         <div class="k-date">30.09 – 30.11</div>
         <div class="k-desc">Vino novello, castagne, cucina autunnale altoatesina</div>
-        <div class="k-soon">Prossimamente</div>
+        <a href="/it/toerggelen" class="btn btn-fill btn-sm" style="background:var(--amber);border-color:var(--amber);">Richiesta gruppi</a>
       </div>
     </div>
   </div>
@@ -447,7 +449,7 @@
         </div>
         <div style="display:flex;gap:10px;flex-wrap:wrap;">
           <a href="tel:+393762800929" style="display:inline-flex;padding:12px 22px;background:var(--accent);color:var(--paper);font-family:'PT Sans',sans-serif;font-weight:700;font-size:13px;text-transform:uppercase;letter-spacing:0.5px;">
-            Chiama lo Shuttle
+            Chiama
           </a>
           <a href="https://wa.me/393762800929" target="_blank" class="btn btn-outline">WhatsApp ↗︎</a>
         </div>
@@ -500,8 +502,8 @@
         <a href="https://rafenstein.it/it/#sera">Sera</a>
         <a href="https://rafenstein.it/it/#pranzo">Pranzo</a>
         <a href="/it/events">Eventi</a>
-        <a href="https://rafenstein.it/it/#shuttle">Shuttle</a>
         <a href="https://rafenstein.it/it/#escursioni">Escursioni</a>
+        <a href="/it/toerggelen" style="color:#c4782a;">Törggelen</a>
       </div>
     </div>
     <div>
@@ -558,5 +560,4 @@
   });
 </script>
 
-
-
+</html>
