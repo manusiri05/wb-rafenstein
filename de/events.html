@@ -1,5 +1,6 @@
-
-
+<!DOCTYPE html>
+<html lang="de">
+<head>
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -39,6 +40,7 @@
       --line: #ddd8cc;
       --line-strong: #2c2c28;
       --dark: #1e2820;
+      --amber: #c4782a;
     }
 
     /* ── UTILITY ────────────────────────────────────── */
@@ -270,8 +272,8 @@
     <a href="https://rafenstein.it/de/#abends">Abends</a>
     <a href="https://rafenstein.it/de/#mittags">Mittags</a>
     <a href="/de/events" class="active">Events</a>
-    <a href="https://rafenstein.it/de/#shuttle">Shuttle</a>
     <a href="https://rafenstein.it/de/#wandern">Wandern</a>
+    <a href="/de/toerggelen" style="color:var(--amber);">Törggelen</a>
   </div>
   <div class="nav-right">
     <span class="nav-lang">DE · <a href="https://rafenstein.it/it/" style="color:var(--muted);">IT</a> · EN</span>
@@ -282,8 +284,8 @@
     <a href="https://rafenstein.it/de/#abends" onclick="closeMenu()">Abends</a>
     <a href="https://rafenstein.it/de/#mittags" onclick="closeMenu()">Mittags</a>
     <a href="/de/events" onclick="closeMenu()">Events</a>
-    <a href="https://rafenstein.it/de/#shuttle" onclick="closeMenu()">Shuttle</a>
     <a href="https://rafenstein.it/de/#wandern" onclick="closeMenu()">Wandern</a>
+    <a href="/de/toerggelen" style="color:var(--amber);" onclick="closeMenu()">Törggelen</a>
     <a href="https://rafenstein.it/it/" style="font-size:12px;color:var(--muted);text-transform:uppercase;font-weight:700;">IT · Italiano</a>
     <a href="#reservierung" class="btn btn-fill btn-sm" style="align-self:flex-start;margin-top:4px;" onclick="closeMenu()">Reservieren</a>
   </div>
@@ -296,7 +298,7 @@
   <span>● LIVE · GRILLWOCHEN · 10.04 — 24.04</span>
   <span>· GRILLPLATTE RAFENSTEIN · 35 €</span>
   <span>· CÔTE DE BOEUF FÜR 2 · 95 €</span>
-  <span>· SHUTTLE FR + SA · 18:30 AB BOZEN</span>
+  <span>· TÖRGGELEN 2026 · AB SEPTEMBER</span>
 </div>
 
 <!-- ═══════════════════════════════════════════
@@ -375,7 +377,7 @@
     </div>
     <div style="margin-top:28px;display:flex;gap:10px;flex-wrap:wrap;">
       <a href="#reservierung" class="btn btn-paper">Für heute reservieren</a>
-      <a href="tel:+393762800929" class="btn btn-ghost">Shuttle anrufen</a>
+      <a href="tel:+393762800929" class="btn btn-ghost">Anrufen</a>
     </div>
   </div>
 </div>
@@ -416,7 +418,7 @@
         <div class="k-name">Törggele-Zeit</div>
         <div class="k-date">30.09 – 30.11</div>
         <div class="k-desc">Neuer Wein, Kastanien, Südtiroler Herbstküche</div>
-        <div class="k-soon">Demnächst</div>
+        <a href="/de/toerggelen" class="btn btn-fill btn-sm" style="background:var(--amber);border-color:var(--amber);">Gruppen anfragen</a>
       </div>
     </div>
   </div>
@@ -442,7 +444,7 @@
         </div>
         <div style="display:flex;gap:10px;flex-wrap:wrap;">
           <a href="tel:+393762800929" style="display:inline-flex;padding:12px 22px;background:var(--accent);color:var(--paper);font-family:'PT Sans',sans-serif;font-weight:700;font-size:13px;text-transform:uppercase;letter-spacing:0.5px;">
-            Shuttle anrufen
+            Anrufen
           </a>
           <a href="https://wa.me/393762800929" target="_blank" class="btn btn-outline">WhatsApp ↗︎</a>
         </div>
@@ -495,8 +497,8 @@
         <a href="https://rafenstein.it/de/#abends">Abends</a>
         <a href="https://rafenstein.it/de/#mittags">Mittags</a>
         <a href="/de/events">Events</a>
-        <a href="https://rafenstein.it/de/#shuttle">Shuttle</a>
         <a href="https://rafenstein.it/de/#wandern">Wandern</a>
+        <a href="/de/toerggelen" style="color:#c4782a;">Törggelen</a>
       </div>
     </div>
     <div>
@@ -553,5 +555,4 @@
   });
 </script>
 
-
-
+</html>
