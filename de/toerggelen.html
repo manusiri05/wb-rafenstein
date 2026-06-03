@@ -651,7 +651,7 @@
 
       <div class="anfrage-box">
         <div class="tag tag-amber">Kontaktdaten</div>
-        <form action="https://formspree.io/f/mojzqjbo" method="POST" id="gruppenform">
+        <form action="https://formspree.io/f/mgoqzvgb" method="POST" id="gruppenform">
           <input type="hidden" name="_subject" value="Törggelen 2026 Gruppenanfrage – Rafenstein">
           <div class="anfrage-grid">
             <div class="anfrage-field">
@@ -664,7 +664,7 @@
             </div>
             <div class="anfrage-field">
               <label class="anfrage-label" for="telefon">Telefon / WhatsApp</label>
-              <input class="anfrage-input" type="tel" id="telefon" name="telefon" placeholder="+39 ...">
+              <input class="anfrage-input" type="tel" id="telefon" name="telefon" placeholder="+39 ..." required>
             </div>
             <div class="anfrage-field">
               <label class="anfrage-label" for="personen">Personenanzahl</label>
@@ -679,12 +679,13 @@
             </div>
             <div class="anfrage-field">
               <label class="anfrage-label" for="wunschdatum">Wunschtermin</label>
-              <input class="anfrage-input" type="text" id="wunschdatum" name="wunschdatum" placeholder="z.B. Freitag Anfang Oktober">
+              <input class="anfrage-input" type="text" id="wunschdatum" name="wunschdatum" placeholder="z.B. Freitag Anfang Oktober" required>
             </div>
             <div class="anfrage-field">
               <label class="anfrage-label" for="zeitraum">Bevorzugter Zeitraum</label>
-              <select class="anfrage-select" id="zeitraum" name="zeitraum">
-                <option value="">Egal / flexibel</option>
+              <select class="anfrage-select" id="zeitraum" name="zeitraum" required>
+                <option value="" disabled selected>Bitte wählen</option>
+                <option value="egal">Egal / flexibel</option>
                 <option value="september">September 2026</option>
                 <option value="oktober-früh">Oktober – 1. Hälfte</option>
                 <option value="oktober-spät">Oktober – 2. Hälfte</option>
