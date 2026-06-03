@@ -3,6 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/png" href="https://cdn.jsdelivr.net/gh/manusiri05/wb-rafenstein@main/assets/logo.png">
+<link rel="icon" type="image/png" href="https://cdn.jsdelivr.net/gh/manusiri05/wb-rafenstein@main/assets/logo.png">
 <title>Gasthaus Rafenstein – Cucina tradizionale altoatesina sopra Bolzano</title>
 <meta name="description" content="Gasthaus Rafenstein – cucina tradizionale altoatesina con vista panoramica su Bolzano. Aperto ogni giorno, a pranzo e a cena. Business Lunch, settimane eventi. Prenota ora.">
 <meta name="robots" content="index, follow">
@@ -10,7 +12,7 @@
 <meta property="og:type" content="restaurant">
 <meta property="og:title" content="Gasthaus Rafenstein – Cucina tradizionale altoatesina sopra Bolzano">
 <meta property="og:description" content="Terrazza panoramica sopra Bolzano, aperto ogni giorno, Business Lunch &amp; cucina serale.">
-<meta property="og:image" content="https://cdn1.site-media.eu/images/0/23125376/FFH25971-HDR-5h0dFSFEI1iWd9khT0TJuA.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/manusiri05/wb-rafenstein@main/assets/toerggelen-hero.jpg">
 <meta property="og:url" content="https://rafenstein.it/it/">
 <link rel="canonical" href="https://rafenstein.it/it/">
 
@@ -105,7 +107,7 @@
 
   /* ── HERO ───────────────────────────────────────── */
   .hero { position: relative; height: 800px; overflow: hidden; }
-  .hero > img { width: 100%; height: 100%; object-fit: cover; object-position: center 70%; }
+  .hero > img { width: 100%; height: 100%; object-fit: cover; object-position: center 15%; }
   .hero-overlay {
     position: absolute; inset: 0;
     background: linear-gradient(180deg, rgba(0,0,0,0.45) 0%, rgba(0,0,0,0.15) 55%, rgba(0,0,0,0.3) 100%);
@@ -213,13 +215,12 @@
   .hike-cta { font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 2px; color: var(--accent-mid); }
 
   /* ── GALLERY ────────────────────────────────────── */
-  .gallery-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; }
-  .g-item { overflow: hidden; cursor: pointer; }
-  .g-item img { width: 100%; height: 240px; object-fit: cover; transition: transform 0.3s; }
-  .g-item:hover img { transform: scale(1.04); }
-  .g-span2 { grid-column: span 2; }
-  .g-row2  { grid-row: span 2; }
-  .g-row2 img { height: 500px; }
+  .gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; }
+  .g-item { overflow: hidden; cursor: pointer; position: relative; }
+  .g-item img { width: 100%; height: 320px; object-fit: cover; transition: transform 0.4s; display: block; }
+  .g-item:hover img { transform: scale(1.05); }
+  .g-item::after { content: ''; position: absolute; inset: 0; background: rgba(0,0,0,0); transition: background 0.3s; }
+  .g-item:hover::after { background: rgba(0,0,0,0.12); }
   .lightbox {
     display: none; position: fixed; inset: 0;
     background: rgba(0,0,0,0.92);
@@ -333,10 +334,8 @@
     .events-img-grid { display: none; }
     .events-mini { grid-template-columns: 1fr 1fr; }
 
-    .gallery-grid { grid-template-columns: repeat(2, 1fr); }
-    .g-span2 { grid-column: span 1; }
-    .g-row2  { grid-row: span 1; }
-    .g-item img, .g-row2 img { height: 140px; }
+    .gallery-grid { grid-template-columns: repeat(3, 1fr); gap: 4px; }
+    .g-item img { height: 120px; }
 
     .cta-title { font-size: 36px; }
 
@@ -356,7 +355,7 @@
 ════════════════════════════════════════════ -->
 <nav class="nav" id="top">
   <a href="https://rafenstein.it/it/" class="nav-logo">
-    <img src="https://cdn1.site-media.eu/images/0/20458837/logo_rafenstein2-UE-PXVr0qwkblx3mYbwwag.png" alt="Gasthaus Rafenstein">
+    <img src="https://cdn.jsdelivr.net/gh/manusiri05/wb-rafenstein@main/assets/logo.png" alt="Gasthaus Rafenstein">
   </a>
   <div class="nav-links">
     <a href="#sera">Sera</a>
@@ -389,7 +388,7 @@
      HERO
 ════════════════════════════════════════════ -->
 <div class="hero">
-  <img src="https://cdn1.site-media.eu/images/0/24929729/FFH26008-HDR-QMkdcxBle1Y2Toad8Rji1Q.jpg" alt="Tramonto terrazza Gasthaus Rafenstein sopra Bolzano" fetchpriority="high">
+  <img src="https://cdn.jsdelivr.net/gh/manusiri05/wb-rafenstein@main/assets/BarVicino%26GasthofRafenstein%E2%80%93JGAVisuals_Mai26-136.jpg" alt="Terrazza Gasthaus Rafenstein sopra Bolzano" fetchpriority="high">
   <div class="hero-overlay"></div>
   <div class="hero-content">
     <h1 class="hero-title">
@@ -428,7 +427,7 @@
           <a href="https://cdn.jsdelivr.net/gh/manusiri05/wb-rafenstein@main/Speisekarte_Sommer26_Rafenstein.pdf" target="_blank" class="btn btn-outline">Menu ↗︎</a>
         </div>
       </div>
-      <img src="https://cdn1.site-media.eu/images/0/23125376/FFH25971-HDR-5h0dFSFEI1iWd9khT0TJuA.jpg" alt="Terrazza panoramica serale Gasthaus Rafenstein" style="width:100%;height:500px;object-fit:cover;">
+      <img src="https://cdn.jsdelivr.net/gh/manusiri05/wb-rafenstein@main/assets/toerggelen-hero.jpg" alt="Terrazza panoramica serale Gasthaus Rafenstein" style="width:100%;height:500px;object-fit:cover;">
     </div>
   </div>
 </div>
@@ -440,7 +439,7 @@
 <div class="section" id="mezzogiorno">
   <div class="container">
     <div class="two-col two-col-1-2">
-      <img src="https://cdn1.site-media.eu/images/0/24929721/FFH26470-LY9sHEXBGDOUOudwey-sDg.jpg" alt="Business Lunch Gasthaus Rafenstein" style="width:100%;height:500px;object-fit:cover;" class="img-desktop">
+      <img src="https://cdn.jsdelivr.net/gh/manusiri05/wb-rafenstein@main/assets/BarVicino%26GasthofRafenstein%E2%80%93JGAVisuals_Mai26-125.jpg" alt="Business Lunch Gasthaus Rafenstein" style="width:100%;height:500px;object-fit:cover;" class="img-desktop">
       <div>
         <div class="tag">Mezzogiorno · 11:30 – 14:30 · Ogni giorno</div>
         <h2>Business Lunch. <em style="color:var(--accent)">Menu di qualità a prezzo conveniente.</em></h2>
@@ -466,7 +465,7 @@
           <a href="https://cdn.jsdelivr.net/gh/manusiri05/wb-rafenstein@main/Menu%CC%88%20Vorlagen%20(2).pdf" target="_blank" class="btn btn-outline">Business Lunch ↗︎</a>
         </div>
       </div>
-      <img src="https://cdn1.site-media.eu/images/0/24929721/FFH26470-LY9sHEXBGDOUOudwey-sDg.jpg" alt="Business Lunch" style="width:100%;height:220px;object-fit:cover;display:none;" class="img-mobile">
+      <img src="https://cdn.jsdelivr.net/gh/manusiri05/wb-rafenstein@main/assets/BarVicino%26GasthofRafenstein%E2%80%93JGAVisuals_Mai26-125.jpg" alt="Business Lunch" style="width:100%;height:220px;object-fit:cover;display:none;" class="img-mobile">
     </div>
   </div>
 </div>
@@ -492,10 +491,10 @@
         </div>
       </div>
       <div class="events-img-grid">
-        <img src="https://cdn1.site-media.eu/images/0/24929795/Gemini_Generated_Image_yqgg4eyqgg4eyqgg-bIL6Rk0khDzrQNCLZeiuXw.png" alt="Settimane della griglia Rafenstein" style="width:100%;height:420px;object-fit:cover;">
+        <img src="https://cdn.jsdelivr.net/gh/manusiri05/wb-rafenstein@main/assets/events-teaser.png" alt="Settimane della griglia Rafenstein" style="width:100%;height:420px;object-fit:cover;">
         <div style="display:flex;flex-direction:column;gap:10px;">
-          <img src="https://cdn1.site-media.eu/images/0/24929703/FFH26416-yL3Y6KYS82OtRp2NmA3eVA.jpg" alt="Cucina Rafenstein" style="width:100%;height:205px;object-fit:cover;">
-          <img src="https://cdn1.site-media.eu/images/0/24929720/FFH26480-5xVJA1WDG7r7WpcjC_VzNw.jpg" alt="Kaiserschmarren" style="width:100%;height:205px;object-fit:cover;">
+          <img src="https://cdn.jsdelivr.net/gh/manusiri05/wb-rafenstein@main/assets/BarVicino%26GasthofRafenstein%E2%80%93JGAVisuals_Mai26-134.jpg" alt="Terrazza Gasthaus Rafenstein" style="width:100%;height:205px;object-fit:cover;object-position:center top;">
+          <img src="https://cdn.jsdelivr.net/gh/manusiri05/wb-rafenstein@main/assets/BarVicino%26GasthofRafenstein%E2%80%93JGAVisuals_Mai26-119.jpg" alt="Piatto Rafenstein" style="width:100%;height:205px;object-fit:cover;">
         </div>
       </div>
     </div>
@@ -556,7 +555,7 @@
           <a href="https://www.google.com/maps?geocode=FSCxxQIdDyitACkDKsXsX56CRzEmgFlDE-n1Bg%3D%3D;FeLSxQIdHPasACl_Q9AE7J6CRzF_Kou0vLZcnw%3D%3D;FTnsxQIda0mtACkr4uK-8Z6CRzHGh2AVe1Q4bA%3D%3D&amp;daddr=Abzweigung+St.+Georgen,+39100+Bozen,+Autonome+Provinz+Bozen+-+S%C3%BCdtirol+to:Restaurant+Schloss+Rafenstein,+Rafensteiner+Weg,+38,+39100+Bozen,+Autonome+Provinz+Bozen+-+S%C3%BCdtirol&amp;saddr=Weingut+Hans+Rottensteiner,+Sarntaler+Stra%C3%9Fe,+Bozen,+Autonome+Provinz+Bozen+-+S%C3%BCdtirol&amp;dirflg=d" target="_blank" class="btn btn-outline">Come raggiungerci ↗︎</a>
         </div>
       </div>
-      <img src="https://d2exd72xrrp1s7.cloudfront.net/www/16/165psthipr1pt1tse9qitok0xx3fp8jesi-p81410906-full/17348525ea1?width=1920&amp;crop=false&amp;q=70" alt="Escursione a Gasthaus Rafenstein Bolzano" class="wandern-img" style="width:100%;height:520px;object-fit:cover;">
+      <img src="https://cdn.jsdelivr.net/gh/manusiri05/wb-rafenstein@main/assets/BarVicino%26GasthofRafenstein%E2%80%93JGAVisuals_Mai26-131.jpg" alt="Terrazza Gasthaus Rafenstein Bolzano" class="wandern-img" style="width:100%;height:520px;object-fit:cover;object-position:center top;">
     </div>
   </div>
 </div>
@@ -634,32 +633,32 @@
       Gasthaus Rafenstein <em style="color:var(--accent)">in immagini.</em>
     </h2>
     <div class="gallery-grid">
-      <div class="g-item g-span2 g-row2" onclick="openLightbox(this)">
-        <img src="https://cdn1.site-media.eu/images/0/23125376/FFH25971-HDR-5h0dFSFEI1iWd9khT0TJuA.jpg" alt="Panorama">
+      <div class="g-item" onclick="openLightbox(this)">
+        <img src="https://cdn.jsdelivr.net/gh/manusiri05/wb-rafenstein@main/assets/BarVicino%26GasthofRafenstein%E2%80%93JGAVisuals_Mai26-97.jpg" alt="Coppia in terrazza con vista panoramica su Bolzano">
       </div>
       <div class="g-item" onclick="openLightbox(this)">
-        <img src="https://cdn1.site-media.eu/images/0/19410952/FFH29457--Saxo-duP4xYix8HA7VCHg.jpg" alt="Terrazza a pranzo">
-      </div>
-      <div class="g-item g-span2" onclick="openLightbox(this)">
-        <img src="https://cdn1.site-media.eu/images/0/24929729/FFH26008-HDR-QMkdcxBle1Y2Toad8Rji1Q.jpg" alt="Vista">
+        <img src="https://cdn.jsdelivr.net/gh/manusiri05/wb-rafenstein@main/assets/BarVicino%26GasthofRafenstein%E2%80%93JGAVisuals_Mai26-131.jpg" alt="Spaghetti alle vongole in terrazza">
       </div>
       <div class="g-item" onclick="openLightbox(this)">
-        <img src="https://cdn1.site-media.eu/images/0/24929703/FFH26416-yL3Y6KYS82OtRp2NmA3eVA.jpg" alt="Dalla cucina">
+        <img src="https://cdn.jsdelivr.net/gh/manusiri05/wb-rafenstein@main/assets/BarVicino%26GasthofRafenstein%E2%80%93JGAVisuals_Mai26-134.jpg" alt="Terrazza Gasthaus Rafenstein">
       </div>
       <div class="g-item" onclick="openLightbox(this)">
-        <img src="https://cdn1.site-media.eu/images/0/24929721/FFH26470-LY9sHEXBGDOUOudwey-sDg.jpg" alt="Gulasch con riso">
+        <img src="https://cdn.jsdelivr.net/gh/manusiri05/wb-rafenstein@main/assets/BarVicino%26GasthofRafenstein%E2%80%93JGAVisuals_Mai26-94.jpg" alt="Gasthaus Rafenstein">
       </div>
       <div class="g-item" onclick="openLightbox(this)">
-        <img src="https://cdn1.site-media.eu/images/0/24929723/FFH26428-aFxrSqXhgtBS_6e4HmjSpA.jpg" alt="Uova con speck">
+        <img src="https://cdn.jsdelivr.net/gh/manusiri05/wb-rafenstein@main/assets/BarVicino%26GasthofRafenstein%E2%80%93JGAVisuals_Mai26-125.jpg" alt="Spaghetti Cozze e Vongole">
       </div>
       <div class="g-item" onclick="openLightbox(this)">
-        <img src="https://cdn1.site-media.eu/images/0/24929720/FFH26480-5xVJA1WDG7r7WpcjC_VzNw.jpg" alt="Kaiserschmarren">
+        <img src="https://cdn.jsdelivr.net/gh/manusiri05/wb-rafenstein@main/assets/BarVicino%26GasthofRafenstein%E2%80%93JGAVisuals_Mai26-115.jpg" alt="Caprese – Mozzarella e pomodori">
       </div>
       <div class="g-item" onclick="openLightbox(this)">
-        <img src="https://cdn1.site-media.eu/images/0/24929795/Gemini_Generated_Image_yqgg4eyqgg4eyqgg-bIL6Rk0khDzrQNCLZeiuXw.png" alt="Settimane della griglia">
+        <img src="https://cdn.jsdelivr.net/gh/manusiri05/wb-rafenstein@main/assets/BarVicino%26GasthofRafenstein%E2%80%93JGAVisuals_Mai26-100.jpg" alt="Vista su Bolzano dalla terrazza">
       </div>
       <div class="g-item" onclick="openLightbox(this)">
-        <img src="https://d2exd72xrrp1s7.cloudfront.net/www/16/165psthipr1pt1tse9qitok0xx3fp8jesi-p81410906-full/17348525ea1?width=1920&amp;crop=false&amp;q=70" alt="Escursione">
+        <img src="https://cdn.jsdelivr.net/gh/manusiri05/wb-rafenstein@main/assets/BarVicino%26GasthofRafenstein%E2%80%93JGAVisuals_Mai26-103.jpg" alt="Cucina Gasthaus Rafenstein">
+      </div>
+      <div class="g-item" onclick="openLightbox(this)">
+        <img src="https://cdn.jsdelivr.net/gh/manusiri05/wb-rafenstein@main/assets/BarVicino%26GasthofRafenstein%E2%80%93JGAVisuals_Mai26-106.jpg" alt="Preparazione in cucina">
       </div>
     </div>
   </div>
@@ -770,7 +769,7 @@
   <div class="footer-grid">
     <div>
       <div class="footer-logo">
-        <img src="https://cdn1.site-media.eu/images/0/20458837/logo_rafenstein2-UE-PXVr0qwkblx3mYbwwag.png" alt="Gasthaus Rafenstein">
+        <img src="https://cdn.jsdelivr.net/gh/manusiri05/wb-rafenstein@main/assets/logo.png" alt="Gasthaus Rafenstein">
       </div>
       <div class="footer-address">
         Rafensteinerweg 38<br>
