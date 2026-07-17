@@ -77,6 +77,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .btn-outline { background: transparent; color: var(--ink);   border: 1.5px solid var(--line); }
   .btn-ghost   { background: transparent; color: var(--paper);  border: 1.5px solid var(--paper); }
   .btn-ghost-dim { background: transparent; color: var(--paper); border: 1.5px solid rgba(255,255,255,0.4); }
+  .btn-anfahrt { background: transparent; color: var(--paper); border: 1.5px solid var(--paper); }
+  @media (max-width: 768px) {
+    .btn-anfahrt { flex-basis: 100%; width: 100%; justify-content: center; padding: 9px 20px !important; font-size: 12px; letter-spacing: 1px; }
+  }
 
   /* ── NAV ────────────────────────────────────────── */
   .nav {
@@ -397,6 +401,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <a href="https://cdn.jsdelivr.net/gh/manusiri05/wb-rafenstein@main/Speisekarte_Sommer26_Rafenstein.pdf" target="_blank" class="btn btn-ghost btn-lg">Speisekarte ↗︎</a>
       <a href="https://cdn.jsdelivr.net/gh/manusiri05/wb-rafenstein@main/Menu%CC%88%20Vorlagen%20(2).pdf" target="_blank" class="btn btn-ghost btn-lg btn-hide-mobile">Businesslunch ↗︎</a>
       <a href="https://cdn.jsdelivr.net/gh/manusiri05/wb-rafenstein@main/Grillabende%20Rafenstein.pdf" target="_blank" class="btn btn-ghost btn-lg">Grillkarte ↗︎</a>
+      <a href="https://www.google.com/maps?geocode=FSCxxQIdDyitACkDKsXsX56CRzEmgFlDE-n1Bg%3D%3D;FeLSxQIdHPasACl_Q9AE7J6CRzF_Kou0vLZcnw%3D%3D;FTnsxQIda0mtACkr4uK-8Z6CRzHGh2AVe1Q4bA%3D%3D&amp;daddr=Abzweigung+St.+Georgen,+39100+Bozen,+Autonome+Provinz+Bozen+-+S%C3%BCdtirol+to:Restaurant+Schloss+Rafenstein,+Rafensteiner+Weg,+38,+39100+Bozen,+Autonome+Provinz+Bozen+-+S%C3%BCdtirol&amp;saddr=Weingut+Hans+Rottensteiner,+Sarntaler+Stra%C3%9Fe,+Bozen,+Autonome+Provinz+Bozen+-+S%C3%BCdtirol&amp;dirflg=d" target="_blank" class="btn btn-anfahrt btn-lg">Empfohlene Anfahrt ↗︎</a>
     </div>
   </div>
 </div>
